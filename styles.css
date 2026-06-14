@@ -1,0 +1,351 @@
+:root{
+    --primary-color: rgb(179, 177, 176, 0.6);
+    --primary-font: 'sans-serif', 'times new roman';
+    --secondary-color: #665c50bd;
+    --third-color:#0a0601bd;
+}
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    padding: 0;
+    line-height: 1.5;
+    
+}
+body{
+    display:flex;
+    flex-direction:column;
+}
+
+
+*{
+   
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    width: 100%;
+}
+
+.off-screen-menu{
+    background-color:rgb(34,37,49);
+    height:100vh;
+    width: 100%;
+    max-width:450px;
+    position:fixed;
+    z-index:2;
+    right:0;
+    flex-direction:column;
+    display:none;
+    align-items:center;
+    text-align:center;
+    font-size: 2rem;
+    transition: .3s ease;
+}
+.off-screen-menu ul li {
+    color:white;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background-color: white;
+    font-family: var(--primary-font);
+    width: 100vw;
+    position:fixed;
+    z-index: 1;
+}
+#header-div{
+    display:flex;
+    padding-right: 1rem;
+}
+#business-logo{
+    width: 45px;
+    height: 45px;
+}
+
+
+header ul{
+    display:flex;
+    
+    gap: 5rem;
+}
+
+#header-div a{
+    text-decoration: none;
+    color:black;
+    
+   
+}
+
+.main-wrap{
+    
+    flex: 1;
+ 
+}
+
+
+.main-image {
+    width:100%;
+    height: 250px;
+    /*this image size with contain looks better even though its width doesn't fill container div */
+    /*background: url("./images/companyLogo.png") no-repeat center;*/
+    background-size:contain;
+    position:relative;
+    /* added additional background property to fill cover the rest of container */
+    /*background-color:black;*/
+    
+} 
+
+/* just used this better to target all sections in html */
+section{
+    display:flex;
+    justify-content:center;
+    width:100%;
+    flex-wrap: wrap;
+}
+
+canvas{
+    background: radial-gradient(rgb(39, 27, 27), rgb(46, 45, 45) );
+    width: 100%;
+    height:200px;
+    padding:0;
+    margin:0;
+  
+}
+
+
+.main-container{
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    color:whitesmoke;
+   
+}
+
+.services{
+    width:100%;
+    text-align:center;
+    color:#c21414;
+}
+.cards{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    padding: 1rem;
+    width: 13em;
+    background-color:white;
+    border-radius: 8px;
+  
+    margin: 20px;
+    text-align:center;
+    color: black;
+}
+.cards:hover{
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    background-color:whitesmoke;
+    cursor:pointer;
+}
+
+.cards h2{
+    color:black;
+    font-size: 1rem;
+}
+
+.cards a{
+    color:#c21414;
+    font-size: 0.9rem;
+}
+#card-icon:hover{
+    transition: transform 2s ease;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.2);
+    transform: rotate(360deg);
+    
+}
+
+
+/* couldve just used one parent for the img instead used two, it also seems like i 
+used this for alignment of the section tag but the html is broken up into section
+so that didn't work. its targeting all sections instead of the card container
+
+
+.cards-container{
+    display:flex;
+    justify-content:center;
+    width:auto;
+    flex-wrap: wrap;
+}
+*/
+
+.video-container1{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    line-height:2rem;
+    font-family: var(--primary-font);
+    width: 100%;
+    height: auto;
+    gap: 5rem;
+    background-color: whitesmoke;
+}
+
+
+.first-video{
+    border-radius: 5px;
+    width: 55%;
+}
+
+
+
+.wrap-text{
+    width: 30em;
+    color: black;
+    text-align:left;
+    
+}
+
+#card-icon {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width: 76px;
+    height:76px;
+    background-color:#c21414;
+    border-radius: 70%;
+    padding: 20px;
+    
+}
+.icon{
+    width: 40px;
+    height: 40px;
+}
+
+.headerText{
+    color:black;
+    font-size: 2em;
+    margin-bottom: 1rem;
+}
+.wrap-text p {
+    font-size: 1.4rem;
+    
+}
+.wrap-text .headerText{
+    padding-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    background: radial-gradient(  var(--primary-color), rgb(216, 216, 216), rgb(187, 186, 186));
+    gap:2rem;
+    color:var(--third-color); /* this is for the header text in the footers div*/
+    padding: 0 20px;
+    margin: 0 auto;
+   
+}
+
+footer, h3{
+    font-family: var(--primary-font);
+}
+
+.footer-container{
+    padding-top: 1em;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    justify-content:space-evenly;
+    gap:40px;
+    text-align:left;
+    
+}
+
+
+
+.footer-section p{
+    font-weight:100;
+    color:var(--secondary-color); /* use root for color value grey */
+    /* use root for font family will match header div link font*/
+} 
+footer li{
+    font-weight:100;
+    
+}
+
+.footer-bottom{
+    display:flex;
+    align-items:center;
+    grid-column: 1 / 4;
+    justify-content:space-around;
+    border-top: 1px rgb(255, 255, 255, 0.2) solid;
+    width: 100%;
+    padding: 1em 0 1rem;
+    color: var(--secondary-color); /* use root for color value grey */
+    /* use root for font family will match header div link font*/
+  
+}
+.footer-section1{
+    text-align:center;
+}
+.bottom-footer-right{
+    display:flex;
+    text-align:center;
+    gap: 1em;
+}
+
+li,a {
+    text-decoration: none;
+    list-style-type: none;
+    color: var(--secondary-color); /* use root for color value grey */
+    /* use root for font family will not match header div link font*/
+}
+
+
+
+@media(max-width:768px){
+    .footer-container{
+        text-align:center;
+    }
+    #header-div{
+        display:none;
+    }
+    .wrap-text{
+        text-align:center;
+    }
+}
+@media(min-width:300px){
+    /* This wraps texts below the line in footer */
+    .footer-bottom{
+        flex-wrap:wrap;
+    }
+    .wrap-text .headerText{
+    padding-top: 15px;
+}
+    
+}
+@media(max-width: 400px){
+    .first-video{
+        border-radius: 5px;
+        width: 100%;
+    }
+    .footer-bottom{
+        text-align:center;
+        gap: 15px 10px;
+    }
+    .wrap-text .headerText{
+    padding-top: 15px;
+}
+
+}
