@@ -45,6 +45,34 @@ body{
 .off-screen-menu ul li {
     color:white;
 }
+nav{
+    display:none;
+    padding:1rem;
+    
+}
+.ham-menu{
+    height: 50px;
+    width: 50px;
+    margin-left:auto;
+    position:relative;
+}
+.ham-menu span {
+    height: 5px;
+    width: 100%;
+    background-color: black;
+    border-radius: 25px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+}
+.ham-menu span:nth-child(1){
+    top:25%;
+}
+.ham-menu span:nth-child(3){
+    top: 75%;
+}
 
 header{
     display:flex;
@@ -324,6 +352,9 @@ li,a {
     .wrap-text{
         text-align:center;
     }
+    nav{
+    display:flex;
+}
 }
 @media(min-width:300px){
     /* This wraps texts below the line in footer */
@@ -333,6 +364,7 @@ li,a {
     .wrap-text .headerText{
     padding-top: 15px;
 }
+
     
 }
 @media(max-width: 400px){
